@@ -9,6 +9,7 @@
 - [ ] Auth user by only creating one challenge.
 - [ ] Add Reset Functionality if the user wish to Start over.
 - [ ] Try Creating Credit System, if the user completes a week in a row.
+- [ ] Try to Write Clean Code.
 
 ## IN-PROGRESS & COMPLETED:
 
