@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .ct-btn {
+    @apply bg-black text-white rounded-xl font-mono hover:bg-white hover:text-black;
+  }
+}
