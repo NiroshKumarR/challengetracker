@@ -1,6 +1,6 @@
 ## TODO:
 
-- [ ] Add Tailwind css to project
+- [ ] Add Tailwind css to project and Daisyui
 - [ ] start with mobile first and Pc design
 - [ ] Add crad slider for card selection
 - [ ] Try for Multi Date Picker in calendar or just use simple math if its not possible.
@@ -12,4 +12,4 @@
 
 ## IN-PROGRESS & COMPLETED:
 
-- [x] Added Tailwind Css to project.
+- [x] Added Tailwind Css to project and Daisyui.
