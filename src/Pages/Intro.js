@@ -42,7 +42,7 @@ export default function Intro() {
 
       <div id="actions">
         {intro2 ? (
-          <Link to="/" className="btn ct-btn btn-wide">
+          <Link to="/challenge" className="btn ct-btn btn-wide">
             Lets Dive init
           </Link>
         ) : (
