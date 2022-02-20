@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import Intro from "./Pages/Intro";
 import ChallengeSelect from "./Pages/ChallengeSelect";
+import Dashboard from "./Pages/Dashboard";
 
 ReactDOM.render(
   <Router>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Route exact path="/" element={<App />} />
       <Route path="intro" element={<Intro />} />
       <Route path="challenge" element={<ChallengeSelect />} />
+      <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   </Router>,
   document.getElementById("root")
