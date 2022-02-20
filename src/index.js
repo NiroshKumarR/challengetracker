@@ -13,6 +13,7 @@ ReactDOM.render(
       <Route exact path="/" element={<App />} />
       <Route path="intro" element={<Intro />} />
       <Route path="challenge" element={<ChallengeSelect />} />
+      {/* <Route path="letsdoit" element={<ChallengeSelect />} /> */}
       <Route path="dashboard" element={<Dashboard />} />
     </Routes>
   </Router>,

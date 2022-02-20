@@ -1,12 +1,10 @@
-import { useNavigate } from "react-router-dom";
-
-export default function Card({ img, imgId, index }) {
-  const navigate = useNavigate();
-
+export default function Card({ img, imgId, index, accepted, days }) {
   // Functions
   const setChallenge = () => {
-    localStorage.setItem("challenge", index);
-    navigate("/dashboard");
+    // localStorage.setItem("challenge", index);
+    localStorage.setItem("challengeDays", days);
+
+    accepted();
   };
   return (
     <div

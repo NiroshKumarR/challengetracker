@@ -1,3 +1,3 @@
 export default function Dashboard() {
-  return <div>Dashboard</div>;
+  return <div className="flex items-center justify-center">Dashboard</div>;
 }

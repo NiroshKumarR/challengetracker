@@ -2,11 +2,11 @@ import Card from "./card";
 import productivework from "../assets/productivework.png";
 import logo from "../assets/sample.jpg";
 
-export default function Cards() {
+export default function Cards({ accepted }) {
   const challenges = [
-    { img: productivework, title: "100day" },
-    { img: logo, title: "60day" },
-    { img: productivework, title: "30day" },
+    { img: productivework, title: "100day", days: 100 },
+    { img: logo, title: "60day", days: 60 },
+    { img: productivework, title: "30day", days: 30 },
   ];
 
   return (
@@ -18,6 +18,8 @@ export default function Cards() {
             imgId={`#item${i + 1}`}
             index={challenge.title}
             key={i}
+            accepted={accepted}
+            days={challenge.days}
           />
         ))}
       </div>
