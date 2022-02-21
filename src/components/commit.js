@@ -10,7 +10,7 @@ export default function Commit() {
         </label>
         <textarea
           name="commitBox"
-          class="textarea textarea-bordered h-28"
+          className="textarea textarea-bordered h-28"
           placeholder="Daily Commit"
         ></textarea>
       </div>
