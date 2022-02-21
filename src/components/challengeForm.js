@@ -33,7 +33,7 @@ export default function ChallengeForm() {
   return (
     <div
       id="challengeform"
-      className="lg:flex items-center justify-center mt-32"
+      className="lg:flex items-center justify-center h-screen"
     >
       <form
         id="form"
