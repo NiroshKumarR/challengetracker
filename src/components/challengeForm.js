@@ -31,7 +31,10 @@ export default function ChallengeForm() {
   };
 
   return (
-    <div id="challengeform">
+    <div
+      id="challengeform"
+      className="lg:flex items-center justify-center mt-32"
+    >
       <form
         id="form"
         className="
@@ -40,7 +43,9 @@ export default function ChallengeForm() {
         onSubmit={handleSubmit}
       >
         <div className="form-control w-full">
-          <h1 className="text-4xl font-bold font-serif">30 day challenge</h1>
+          <h1 className="text-4xl font-bold font-serif">
+            {localStorage.getItem("challengeDays")}Day challenge
+          </h1>
         </div>
         <div className="form-control w-full">
           <label className="label">

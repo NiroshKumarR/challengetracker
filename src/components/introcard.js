@@ -1,15 +1,23 @@
 export default function Introcard({ first_charc, text, img }) {
   return (
-    <div id="intro-card" className="grid grid-flow-row grid-row-2 gap-5">
-      <div id="card-head" className="card">
+    <div
+      id="intro-card"
+      className="grid grid-flow-row grid-row-2 gap-5 lg:gap-2 lg:flex "
+    >
+      <div id="card-head" className="card lg:card-side lg:shadow-2xl">
         <div id="intro-img">
-          <img src={img} alt="Intro illustration" />
+          <figure>
+            <img src={img} className="h-96" alt="Intro illustration" />
+          </figure>
         </div>
-      </div>
-      <div id="card-body" className="card-body">
-        <p>
-          <span className="text-3xl font-bold">{first_charc}</span> {text}
-        </p>
+        <div id="card-body" className="card-body">
+          <p className="lg:text-justify lg:text-xl lg:font-mono">
+            <span className="text-3xl lg:text-5xl font-bold lg:font-semibold">
+              {first_charc}
+            </span>
+            {text}
+          </p>
+        </div>
       </div>
     </div>
   );

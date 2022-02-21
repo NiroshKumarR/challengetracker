@@ -16,7 +16,7 @@ export default function Intro() {
   return (
     <div
       id="intro"
-      className="flex flex-col m-10 items-center justify-center h-screen"
+      className="flex flex-col m-10 items-center justify-center h-screen lg:mx-56 lg:p-20"
     >
       {intro ? (
         <div id="intro1">
@@ -40,7 +40,7 @@ export default function Intro() {
         </div>
       )}
 
-      <div id="actions">
+      <div id="actions" className="lg:mt-5">
         {intro2 ? (
           <Link to="/challenge" className="btn ct-btn btn-wide">
             Lets Dive init
