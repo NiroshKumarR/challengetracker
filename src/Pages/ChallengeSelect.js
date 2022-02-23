@@ -20,16 +20,16 @@ export default function ChallengeSelect() {
   });
 
   return (
-    <div>
+    <div className="mx-48 my-5">
       {!challengeAccepted && (
-        <div
-          id="Challenge-Select"
-          className="flex flex-col items-center justify-center gap-5 h-screen"
-        >
-          <div id="challenge-cards">
-            <Cards accepted={challengeForm} />
-          </div>
+        // <div
+        //   id="Challenge-Select"
+        //   className="flex flex-col items-center justify-center gap-5 h-screen"
+        // >
+        <div id="challenge-cards">
+          <Cards accepted={challengeForm} />
         </div>
+        // </div>
       )}
 
       {challengeAccepted && (
