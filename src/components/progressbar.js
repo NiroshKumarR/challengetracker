@@ -1,11 +1,11 @@
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-
 export default function Progressbar() {
+  const progress = {
+    "--value": 20,
+  };
   return (
     <div id="progressTracker">
-      <div style={{ width: 200, height: 200 }}>
-        <CircularProgressbar value={66} />
+      <div className="radial-progress  border-4" style={progress}>
+        {progress["--value"]}%
       </div>
     </div>
   );
