@@ -37,13 +37,20 @@ export default function Intro() {
         </div>
       )}
 
-      <div id="actions" className="lg:mt-5 lg:ml-80">
+      <div id="actions" className="lg:mt-10 lg:ml-72">
         {intro2 ? (
-          <Link to="/challenge" className="btn ct-btn btn-wide">
+          <Link
+            to="/challenge"
+            className="btn btn-warning lg:btn-wide ml-20 lg:ml-0 w-1/2"
+          >
             Lets Dive init
           </Link>
         ) : (
-          <button className="btn ct-btn btn-wide" onClick={clickNest}>
+          <button
+            data-theme="halloween"
+            className="btn btn-warning lg:btn-wide ml-20 lg:ml-0 w-1/2"
+            onClick={clickNest}
+          >
             Next
           </button>
         )}
