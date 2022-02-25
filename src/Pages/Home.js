@@ -8,7 +8,7 @@ export default function Home() {
           <span className="font-serif lg:text-6xl text-4xl">C</span>hallenge{" "}
           <span className="font-serif lg:text-6xl text-4xl">T</span>racker
         </h1>
-        <span className="divider h-1 rounded-lg bg-yellow-600 lg:w-1/2"></span>
+        <span className="divider h-1 rounded-lg bg-primary lg:w-1/2"></span>
       </div>
       <div id="into">
         <Intro />

@@ -41,14 +41,14 @@ export default function Intro() {
         {intro2 ? (
           <Link
             to="/challenge"
-            className="btn btn-warning lg:btn-wide ml-20 lg:ml-0 w-1/2"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2"
           >
             Lets Dive init
           </Link>
         ) : (
           <button
             data-theme="halloween"
-            className="btn btn-warning lg:btn-wide ml-20 lg:ml-0 w-1/2"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2"
             onClick={clickNest}
           >
             Next

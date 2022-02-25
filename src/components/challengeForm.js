@@ -85,7 +85,7 @@ export default function ChallengeForm() {
           />
         </div>
         <div className="form-control w-full mt-5">
-          <button type="submit" className="btn ct-btn">
+          <button type="submit" className="btn btn-primary">
             Create Challenge
           </button>
         </div>

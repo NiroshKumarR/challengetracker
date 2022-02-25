@@ -1,5 +1,4 @@
 import Card from "./card";
-import productivework from "../assets/productivework.png";
 import logo from "../assets/sample.jpg";
 
 export default function Cards({ accepted }) {

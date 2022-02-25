@@ -22,8 +22,8 @@ export default function Card({ img, imgId, index, accepted, days }) {
         <h2 className="card-title">{days} days</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="justify-center card-actions">
-          <button className="btn ct-btn" onClick={setChallenge}>
-            Buy Now
+          <button className="btn btn-primary" onClick={setChallenge}>
+            Select Challenge
           </button>
         </div>
       </div>
