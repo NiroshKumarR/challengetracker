@@ -4,14 +4,17 @@ import logo from "../assets/sample.jpg";
 
 export default function Cards({ accepted }) {
   const challenges = [
-    { img: productivework, title: "100day", days: 100 },
+    { img: logo, title: "100day", days: 100 },
     { img: logo, title: "60day", days: 60 },
-    { img: productivework, title: "30day", days: 30 },
+    { img: logo, title: "30day", days: 30 },
   ];
 
   return (
     <div id="cardlist">
-      <div id="cards" className="carousel w-64 rounded-box">
+      <div
+        id="cards"
+        className="lg:grid lg:grid-flow-col lg:grid-cols-3 lg:m-5 lg:gap-10 rounded-3xl carousel carousel-vertical lg:p-5 h-screen lg:h-auto"
+      >
         {challenges.map((challenge, i) => (
           <Card
             img={challenge.img}

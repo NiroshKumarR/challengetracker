@@ -8,16 +8,24 @@ export default function Card({ img, imgId, index, accepted, days }) {
   };
   return (
     <div
-      className="w-full carousel-item flex-col items-center justify-center"
+      className="card w-96 bg-base-100 shadow-xl carousel-item mt-5 lg:mt-0"
       id={imgId}
     >
-      <div id="card-head">
-        <img src={img} alt="challenge images"></img>
-      </div>
-      <div id="actions">
-        <button className="btn ct-btn" onClick={setChallenge}>
-          Select
-        </button>
+      <figure>
+        <img
+          src={img}
+          alt="challenge images"
+          className="w-full h-64 object-cover"
+        />
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">{days} days</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="justify-center card-actions">
+          <button className="btn ct-btn" onClick={setChallenge}>
+            Buy Now
+          </button>
+        </div>
       </div>
     </div>
   );
