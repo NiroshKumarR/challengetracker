@@ -1,4 +1,4 @@
-import Introcard from "../components/introcard";
+import Introcard from "./introcard";
 import productiveWork from "../assets/productivework.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ export default function Intro() {
     setIntro2(true);
   };
   return (
-    <div id="intro">
+    <div id="intro" className="lg:mx-56 lg:p-20">
       {intro ? (
         <div id="intro1">
           <Introcard
@@ -37,7 +37,7 @@ export default function Intro() {
         </div>
       )}
 
-      <div id="actions" className="lg:mt-5">
+      <div id="actions" className="lg:mt-5 lg:ml-80">
         {intro2 ? (
           <Link to="/challenge" className="btn ct-btn btn-wide">
             Lets Dive init
