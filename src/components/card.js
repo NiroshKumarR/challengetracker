@@ -7,7 +7,10 @@ export default function Card({ img, imgId, index, accepted, days }) {
     accepted();
   };
   return (
-    <div id={imgId}>
+    <div
+      className="w-full carousel-item flex-col items-center justify-center"
+      id={imgId}
+    >
       <div id="card-head">
         <img src={img} alt="challenge images"></img>
       </div>
