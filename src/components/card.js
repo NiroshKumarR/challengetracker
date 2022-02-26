@@ -2,8 +2,7 @@ export default function Card({ img, imgId, index, accepted, days }) {
   // Functions
   const setChallenge = () => {
     // localStorage.setItem("challenge", index);
-    localStorage.setItem("challengeDays", days);
-
+    localStorage.setItem("challengeType", days);
     accepted();
   };
   return (

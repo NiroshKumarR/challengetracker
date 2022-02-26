@@ -12,7 +12,13 @@ export default function ChallengeForm() {
   // Functions
   const handleSubmit = (e) => {
     e.preventDefault();
-    let data = { fromDate, toDate, challengeTitle };
+    let date1 = new Date(fromDate);
+    let date2 = new Date(toDate);
+
+    let timeDiff = date2.getTime() - date1.getTime();
+
+    let totalDays = timeDiff / (1000 * 60 * 60 * 24);
+    let data = { fromDate, toDate, challengeTitle, totalDays };
     let storeData = JSON.stringify(data);
     localStorage.setItem("challengeDays", storeData);
     navigate("/dashboard");

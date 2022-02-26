@@ -1,9 +1,18 @@
+import { useEffect, useState } from "react";
 import Commit from "../components/commit";
 // import Stats from "../components/stats";
 import Progressbar from "../components/progressbar";
 import Stats from "../components/stats";
 
 export default function Dashboard() {
+  const [progressData, setProgressData] = useState("");
+  const [heatMapdata, setHeatMapData] = useState("");
+  let data1 = Number(localStorage.getItem("challengeType"));
+  let data2 = JSON.parse(localStorage.getItem("commitData"));
+  console.log(data1 % 50);
+  // useEffect(()=>{
+  //   let d = JSON.parse(localStorage.getItem())
+  // },[])
   return (
     <div
       id="dashboard"

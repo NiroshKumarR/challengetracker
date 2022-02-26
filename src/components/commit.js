@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Commit() {
   // States
   const [commitMsg, setCommitMsg] = useState("");
   const [error, setError] = useState(false);
+  const [done, setDone] = useState(false);
 
   const date = new Date().toISOString().slice(0, 10);
   // Functions
+
+  useEffect(() => {
+    let d = JSON.parse(localStorage.getItem("commitData"));
+
+    if (localStorage.getItem("commitData")) {
+      d.find((e) => {
+        if (e.date === date) {
+          setDone(true);
+        }
+      });
+    } else {
+      setDone(false);
+    }
+  }, [done, date]);
 
   const saveData = () => {
     let d = JSON.parse(localStorage.getItem("commitData"));
@@ -14,7 +29,7 @@ export default function Commit() {
       .toISOString()
       .slice(0, 10);
     if (localStorage.getItem("commitData")) {
-      d.find((e, i) => {
+      d.find((e) => {
         // console.log(e.date === yesterday, i);
         if (e.date === yesterday) {
           console.log("2nd if");
@@ -28,6 +43,7 @@ export default function Commit() {
               },
             ])
           );
+          setDone(true);
         } else {
           console.log("2rd else");
           localStorage.setItem(
@@ -44,6 +60,7 @@ export default function Commit() {
               },
             ])
           );
+          setDone(true);
         }
       });
     } else {
@@ -53,10 +70,11 @@ export default function Commit() {
         JSON.stringify([
           {
             data: commitMsg.length,
-            date: yesterday,
+            date: date,
           },
         ])
       );
+      setDone(true);
     }
 
     console.log(localStorage.getItem("commitData"));
@@ -72,15 +90,23 @@ export default function Commit() {
         </label>
         <textarea
           name="commitBox"
-          className="textarea textarea-bordered h-96 w-full textarea-primary"
+          className="textarea textarea-bordered h-96 w-full textarea-primary mb-2"
           placeholder="Daily Commit"
           onChange={(e) => setCommitMsg(e.target.value)}
         ></textarea>
+        <span className="label-text-alt font-bold text-primary mb-3">
+          <sup className="text-lg text-red-500">*</sup> Keep Your Commit
+          Descriptive, Long Commit gets More Data Points.
+        </span>
       </div>
       <div id="actions" className="card-actions mt-5">
         <button
           onClick={commit}
-          className="btn btn-primary lowercase w-full font-mono lg:text-xl text-black"
+          className={
+            done
+              ? "btn btn-disabled lowercase w-full font-mono lg:text-xl text-black"
+              : "btn btn-primary lowercase w-full font-mono lg:text-xl text-black"
+          }
         >
           commit -m
         </button>
