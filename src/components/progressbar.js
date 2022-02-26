@@ -1,9 +1,7 @@
-export default function Progressbar() {
+export default function Progressbar({ value }) {
   const progress = {
-    "--value": 20,
+    "--value": value,
     "--size": "10rem",
-    backgroundImage:
-      "radial-gradient(hsla(var(--bc)/.2) .5px,hsla(var(--b2)/1) .5px)",
   };
 
   return (
@@ -12,7 +10,7 @@ export default function Progressbar() {
       className="mx-auto flex items-center justify-center"
     >
       <div
-        className="radial-progress bg-primary text-primary border-4 border-primary  text-3xl"
+        className="radial-progress bg-primary text-primary-content border-2 border-primary text-3xl"
         style={progress}
       >
         {progress["--value"]}%

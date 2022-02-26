@@ -30,7 +30,6 @@ export default function Commit() {
       .slice(0, 10);
     if (localStorage.getItem("commitData")) {
       d.find((e) => {
-        // console.log(e.date === yesterday, i);
         if (e.date === yesterday) {
           console.log("2nd if");
           localStorage.setItem(
@@ -76,14 +75,12 @@ export default function Commit() {
       );
       setDone(true);
     }
-
-    console.log(localStorage.getItem("commitData"));
   };
   const commit = () => {
     commitMsg.length !== 0 ? saveData() : setError(true);
   };
   return (
-    <div id="commitbox" className="w-full mx-5 my-10">
+    <div id="commitbox" className="w-full mx-5 my-10 p-5 lg:p-0">
       <div id="text-box">
         <label className="label" htmlFor="commitBox">
           <span className="label-text font-mono text-xl">Daily Task</span>

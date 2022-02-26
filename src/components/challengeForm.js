@@ -29,7 +29,7 @@ export default function ChallengeForm() {
     const date = new Date(e.target.value);
     let commingDays = new Date(
       date.setDate(
-        date.getDate() + Number(localStorage.getItem("challengeDays"))
+        date.getDate() + Number(localStorage.getItem("challengeType"))
       )
     );
     let inputDays = JSON.stringify(commingDays).slice(1, 11);
@@ -50,7 +50,7 @@ export default function ChallengeForm() {
       >
         <div className="form-control w-full">
           <h1 className="text-4xl font-bold font-serif">
-            {localStorage.getItem("challengeDays")}Day challenge
+            {localStorage.getItem("challengeType")}Day challenge
           </h1>
         </div>
         <div className="form-control w-full">
