@@ -2,7 +2,7 @@ export default function Progressbar() {
   const progress = {
     "--value": 20,
     "--size": "10rem",
-    "background-image":
+    backgroundImage:
       "radial-gradient(hsla(var(--bc)/.2) .5px,hsla(var(--b2)/1) .5px)",
   };
 
