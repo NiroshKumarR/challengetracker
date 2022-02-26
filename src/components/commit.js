@@ -6,7 +6,12 @@ export default function Commit() {
   const [error, setError] = useState(false);
   const [done, setDone] = useState(false);
 
-  const date = new Date().toISOString().slice(0, 10);
+  const dateCal = new Date();
+  let day = dateCal.getDate();
+  let month = dateCal.getMonth() + 1;
+  let year = dateCal.getFullYear();
+  let date = `${day}-${month}-${year}`;
+  // const date = new Date().toJSON().slice(0, 10);
   // Functions
 
   useEffect(() => {
@@ -31,7 +36,6 @@ export default function Commit() {
     if (localStorage.getItem("commitData")) {
       d.find((e) => {
         if (e.date === yesterday) {
-          console.log("2nd if");
           localStorage.setItem(
             "commitData",
             JSON.stringify([
@@ -44,7 +48,6 @@ export default function Commit() {
           );
           setDone(true);
         } else {
-          console.log("2rd else");
           localStorage.setItem(
             "commitData",
             JSON.stringify([
@@ -63,7 +66,6 @@ export default function Commit() {
         }
       });
     } else {
-      console.log("last else");
       localStorage.setItem(
         "commitData",
         JSON.stringify([

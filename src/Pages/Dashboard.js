@@ -9,12 +9,14 @@ export default function Dashboard() {
   let heatMapdata = useRef([]);
 
   const checkData = () => {
-    let data1 = Number(localStorage.getItem("challengeType"));
-    let data2 = JSON.parse(localStorage.getItem("commitData"));
-    progressData.current = data2.length % data1;
-    data2.forEach((e) => {
-      heatMapdata.current.push(e.data);
-    });
+    if (localStorage.getItem("commitData")) {
+      let data1 = Number(localStorage.getItem("challengeType"));
+      let data2 = JSON.parse(localStorage.getItem("commitData"));
+      progressData.current = data2.length % data1;
+      data2.forEach((e) => {
+        heatMapdata.current.push(e.data);
+      });
+    }
   };
 
   checkData();
