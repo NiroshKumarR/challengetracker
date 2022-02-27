@@ -1,6 +1,6 @@
 import Introcard from "./introcard";
-import thinkingemoji from "../assets/castle.png";
-import cuteemoji from "../assets/halloween.png";
+import castle from "../assets/castle.png";
+import wolf from "../assets/werewolf.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export default function Intro() {
             text={
               " Hey Hii, Thank you for coming by. I've created this simple App to keep track the challenges we take in the tech world like #100dayChallenge."
             }
-            img={thinkingemoji}
+            img={castle}
             first_charc={"👋"}
           />
         </div>
@@ -32,7 +32,7 @@ export default function Intro() {
             text={
               " Okay all you gotta do is select a Card shown in the next page."
             }
-            img={cuteemoji}
+            img={wolf}
             first_charc={"👉"}
           />
         </div>
