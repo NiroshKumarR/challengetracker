@@ -1,7 +1,7 @@
 import React from "react";
 import { Heatmap } from "react-heatmap-github";
 
-export default function Stats({ title = "100 day challenge", heatMapdata }) {
+export default function Stats({ title, heatMapdata }) {
   return (
     <div id="stats" className="p-10 card card-bordered border-primary">
       <h3 className="text-3xl font-bold font-mono uppercase mb-5 text-center">

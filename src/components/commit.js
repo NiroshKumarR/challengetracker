@@ -11,7 +11,7 @@ export default function Commit() {
   let month = dateCal.getMonth() + 1;
   let year = dateCal.getFullYear();
   let date = `${day}-${month}-${year}`;
-  // const date = new Date().toJSON().slice(0, 10);
+
   // Functions
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Commit() {
             JSON.stringify([
               ...d,
               {
-                data: commitMsg.length,
+                data: commitMsg.replaceAll(" ", "").length,
                 date: date,
               },
             ])
@@ -57,7 +57,7 @@ export default function Commit() {
                 date: yesterday,
               },
               {
-                data: commitMsg.length,
+                data: commitMsg.replaceAll(" ", "").length,
                 date: date,
               },
             ])
@@ -70,13 +70,15 @@ export default function Commit() {
         "commitData",
         JSON.stringify([
           {
-            data: commitMsg.length,
+            data: commitMsg.replaceAll(" ", "").length,
             date: date,
           },
         ])
       );
       setDone(true);
     }
+    setCommitMsg("");
+    window.location.reload();
   };
   const commit = () => {
     commitMsg.length !== 0 ? saveData() : setError(true);
@@ -89,14 +91,11 @@ export default function Commit() {
         </label>
         <textarea
           name="commitBox"
-          className="textarea textarea-bordered h-96 w-full textarea-primary mb-2"
+          className="textarea textarea-bordered w-full textarea-primary mb-2"
           placeholder="Daily Commit"
+          value={commitMsg}
           onChange={(e) => setCommitMsg(e.target.value)}
         ></textarea>
-        <span className="label-text-alt font-bold text-primary mb-3">
-          <sup className="text-lg text-red-500">*</sup> Keep Your Commit
-          Descriptive, Long Commit gets More Data Points.
-        </span>
       </div>
       <div id="actions" className="card-actions mt-5">
         <button
