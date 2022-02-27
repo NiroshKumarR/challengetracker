@@ -7,7 +7,7 @@ export default function Introcard({ first_charc, text, img }) {
       <div id="card-head" className="card lg:card-side lg:shadow-2xl">
         <div id="intro-img">
           <figure>
-            <img src={img} className="h-96" alt="Intro illustration" />
+            <img src={img} className="h-96 px-2" alt="Intro illustration" />
           </figure>
         </div>
         <div id="card-body" className="card-body">

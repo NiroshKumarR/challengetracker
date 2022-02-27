@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 export default function Commit() {
   // States
   const [commitMsg, setCommitMsg] = useState("");
-  // const [error, setError] = useState(false);
   const [done, setDone] = useState(false);
 
   const dateCal = new Date();

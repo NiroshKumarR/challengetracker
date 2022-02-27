@@ -1,5 +1,6 @@
 import Introcard from "./introcard";
-import productiveWork from "../assets/productivework.png";
+import thinkingemoji from "../assets/castle.png";
+import cuteemoji from "../assets/halloween.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -19,20 +20,20 @@ export default function Intro() {
         <div id="intro1">
           <Introcard
             text={
-              "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+              " Hey Hii, Thank you for coming by. I've created this simple App to keep track the challenges we take in the tech world like #100dayChallenge"
             }
-            img={productiveWork}
-            first_charc={"The1"}
+            img={thinkingemoji}
+            first_charc={"👋"}
           />
         </div>
       ) : (
         <div id="intro1">
           <Introcard
             text={
-              "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+              " Okay,please stop the jumping werido🦘 by clicking it. After Clicking it all you gotta do is select a Card shown in the next page and lets do it."
             }
-            img={productiveWork}
-            first_charc={"The2"}
+            img={cuteemoji}
+            first_charc={"👉"}
           />
         </div>
       )}
@@ -41,14 +42,14 @@ export default function Intro() {
         {intro2 ? (
           <Link
             to="/challenge"
-            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 animate-bounce hover:animate-none"
           >
             Lets Dive init
           </Link>
         ) : (
           <button
             data-theme="halloween"
-            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 animate-bounce hover:animate-none"
             onClick={clickNest}
           >
             Next

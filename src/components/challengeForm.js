@@ -66,7 +66,7 @@ export default function ChallengeForm() {
             name="fromDate"
             id="fromDate"
             onChange={slectStartDate}
-            className="input input-bordered rounded-2xl"
+            className="input input-bordered border-primary input-primary  rounded-2xl"
           />
         </div>
         <div className="form-control w-full">
@@ -79,7 +79,7 @@ export default function ChallengeForm() {
             id="toDate"
             value={toDate}
             readOnly
-            className="input input-bordered rounded-2xl"
+            className="input input-bordered input-primary border-primary rounded-2xl"
           />
         </div>
         <div className="form-control w-full">
@@ -87,11 +87,12 @@ export default function ChallengeForm() {
             <span className="label-text">Title</span>
           </label>
           <input
+            autoComplete="off"
             type="text"
             id="title"
             name="title"
             onChange={(e) => setchallengeTitle(e.target.value)}
-            className="input input-bordered rounded-2xl"
+            className="input input-bordered border-primary input-primary rounded-2xl"
           />
         </div>
         <div className="form-control w-full mt-5">
