@@ -11,8 +11,8 @@ export default function Introcard({ first_charc, text, img }) {
           </figure>
         </div>
         <div id="card-body" className="card-body">
-          <p className="lg:text-justify lg:text-xl lg:font-mono">
-            <span className="text-3xl lg:text-5xl font-bold lg:font-semibold">
+          <p className=" lg:text-xl lg:font-mono">
+            <span className="text-3xl lg:text-6xl font-bold lg:font-semibold">
               {first_charc}
             </span>
             {text}

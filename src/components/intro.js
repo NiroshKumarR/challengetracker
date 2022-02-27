@@ -20,7 +20,7 @@ export default function Intro() {
         <div id="intro1">
           <Introcard
             text={
-              " Hey Hii, Thank you for coming by. I've created this simple App to keep track the challenges we take in the tech world like #100dayChallenge"
+              " Hey Hii, Thank you for coming by. I've created this simple App to keep track the challenges we take in the tech world like #100dayChallenge."
             }
             img={thinkingemoji}
             first_charc={"👋"}
@@ -30,7 +30,7 @@ export default function Intro() {
         <div id="intro1">
           <Introcard
             text={
-              " Okay,please stop the jumping werido🦘 by clicking it. After Clicking it all you gotta do is select a Card shown in the next page and lets do it."
+              " Okay all you gotta do is select a Card shown in the next page."
             }
             img={cuteemoji}
             first_charc={"👉"}
@@ -42,14 +42,14 @@ export default function Intro() {
         {intro2 ? (
           <Link
             to="/challenge"
-            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 animate-bounce hover:animate-none"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 "
           >
             Lets Dive init
           </Link>
         ) : (
           <button
             data-theme="halloween"
-            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 animate-bounce hover:animate-none"
+            className="btn btn-primary lg:btn-wide ml-20 lg:ml-0 w-1/2 "
             onClick={clickNest}
           >
             Next
