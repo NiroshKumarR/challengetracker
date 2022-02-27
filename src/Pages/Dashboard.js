@@ -32,22 +32,22 @@ export default function Dashboard() {
     <>
       <div
         id="dashboard"
-        className="lg:grid grid-flow-col grid-col-4 grid-rows-3 lg:gap-10 lg:mt-10 lg:mx-20 h-screen lg:p-20 p-5 space-y-10"
+        className="lg:grid grid-flow-col grid-cols-2 grid-rows-2 lg:p-10 p-5 lg:gap-5 h-screen"
       >
         <div
           id="commitForm"
-          className="col-start-1 row-start-2 row-span-2 card shadow-2xl flex items-center justify-center lg:p-20"
+          className="card shadow-2xl flex items-center justify-center lg:p-20 card-bordered border-primary"
         >
           <Commit />
         </div>
 
         <div
           id="stats"
-          className="flex flex-row items-center justify-center gap-5 p-10 row-start-1"
+          className="flex flex-row items-center justify-center gap-2 col-start-2 card card-bordered border-primary p-20"
         >
           <div>
-            <h2 className="lg:text-xl font-bold font-mono">
-              Your Progress so far
+            <h2 className="lg:text-3xl text-xl font-semibold font-mono">
+              Your Progress so far, for {heatMapdata.current.length} days
             </h2>
           </div>
           <Progressbar
@@ -57,12 +57,12 @@ export default function Dashboard() {
             text={10 * 100}
           />
         </div>
-        <div>
+        <div className="col-span-2 p-2">
           <Stats
             heatMapdata={heatMapdata.current}
             title={`${localStorage.getItem("challengeType")} day challenge`}
           />
-          <div className="flex items-end lg:justify-end justify-center my-10 ">
+          <div className="flex items-end lg:justify-end justify-center mt-4">
             <button onClick={resetData} className="btn btn-primary btn-sm">
               Reset
             </button>
