@@ -32,7 +32,7 @@ export default function Dashboard() {
     <>
       <div
         id="dashboard"
-        className="lg:grid grid-flow-col grid-cols-2 grid-rows-2 lg:p-10 p-5 lg:gap-5 h-screen"
+        className="lg:grid grid-flow-col grid-cols-2 grid-rows-2 lg:p-10 p-5 lg:gap-5 h-screen lg:space-y-0 space-y-5"
       >
         <div
           id="commitForm"
@@ -46,7 +46,7 @@ export default function Dashboard() {
           className="flex flex-row items-center justify-center gap-2 col-start-2 card card-bordered border-primary p-20"
         >
           <div>
-            <h2 className="lg:text-3xl text-xl font-semibold font-mono">
+            <h2 className="lg:text-xl text-base font-semibold font-mono">
               Your Progress so far, for {heatMapdata.current.length} days
             </h2>
           </div>

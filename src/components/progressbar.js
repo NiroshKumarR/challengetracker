@@ -1,7 +1,7 @@
 export default function Progressbar({ value }) {
   const progress = {
     "--value": value,
-    "--size": "10rem",
+    "--size": "8rem",
   };
 
   return (
@@ -10,7 +10,7 @@ export default function Progressbar({ value }) {
       className="mx-auto flex items-center justify-center"
     >
       <div
-        className="radial-progress bg-primary text-primary-content border-2 border-primary text-3xl"
+        className="radial-progress bg-primary text-primary-content lg:border-2 border-primary lg:text-3xl text-base"
         style={progress}
       >
         {progress["--value"]}%
