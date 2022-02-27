@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Commit() {
   // States
   const [commitMsg, setCommitMsg] = useState("");
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [done, setDone] = useState(false);
 
   const dateCal = new Date();
@@ -18,13 +18,7 @@ export default function Commit() {
     let d = JSON.parse(localStorage.getItem("commitData"));
 
     if (localStorage.getItem("commitData")) {
-      d.find((e) => {
-        if (e.date === date) {
-          setDone(true);
-        }
-      });
-    } else {
-      setDone(false);
+      d.find((e) => (e.date === date ? setDone(true) : setDone(false)));
     }
   }, [done, date]);
 
@@ -34,37 +28,39 @@ export default function Commit() {
       .toISOString()
       .slice(0, 10);
     if (localStorage.getItem("commitData")) {
-      d.find((e) => {
-        if (e.date === yesterday) {
-          localStorage.setItem(
-            "commitData",
-            JSON.stringify([
-              ...d,
-              {
-                data: commitMsg.replaceAll(" ", "").length,
-                date: date,
-              },
-            ])
-          );
-          setDone(true);
-        } else {
-          localStorage.setItem(
-            "commitData",
-            JSON.stringify([
-              ...d,
-              {
-                data: 0,
-                date: yesterday,
-              },
-              {
-                data: commitMsg.replaceAll(" ", "").length,
-                date: date,
-              },
-            ])
-          );
-          setDone(true);
-        }
-      });
+      d.find((e) =>
+        e.date === yesterday
+          ? () => {
+              localStorage.setItem(
+                "commitData",
+                JSON.stringify([
+                  ...d,
+                  {
+                    data: commitMsg.replaceAll(" ", "").length,
+                    date: date,
+                  },
+                ])
+              );
+              setDone(true);
+            }
+          : () => {
+              localStorage.setItem(
+                "commitData",
+                JSON.stringify([
+                  ...d,
+                  {
+                    data: 0,
+                    date: yesterday,
+                  },
+                  {
+                    data: commitMsg.replaceAll(" ", "").length,
+                    date: date,
+                  },
+                ])
+              );
+              setDone(true);
+            }
+      );
     } else {
       localStorage.setItem(
         "commitData",
@@ -81,7 +77,7 @@ export default function Commit() {
     window.location.reload();
   };
   const commit = () => {
-    commitMsg.length !== 0 ? saveData() : setError(true);
+    commitMsg.length !== 0 ? saveData() : alert("Enter data");
   };
   return (
     <div id="commitbox" className="w-full mx-5 my-10 p-5 lg:p-0">
